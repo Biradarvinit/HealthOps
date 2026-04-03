@@ -548,7 +548,7 @@ export default function Login() {
             <div>
               <h5 className="text-white font-semibold mb-4">Patient Services</h5>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition">Book Appointment</a></li>
+                <Link to="/book-appointment" className="hover:text-white transition">Book Appointment</Link>
                 <li><a href="#" className="hover:text-white transition">Patient Portal</a></li>
                 <li><a href="#" className="hover:text-white transition">Health Packages</a></li>
                 <li><a href="#" className="hover:text-white transition">Insurance</a></li>

@@ -6,6 +6,7 @@ import AdminDashboard from './pages/AdminDashboard'
 import DoctorDashboard from './pages/DoctorDashboard'
 import ReceptionDashboard from './pages/ReceptionDashboard'
 import ChatBot from './components/ChatBot'
+import AppointmentBooking from './pages/AppointmentBooking'
 
 const Protected: React.FC<{children:React.ReactNode, roles?: string[]}> = ({children, roles}) => {
   const {user} = useAuth()
@@ -54,6 +55,7 @@ export default function App(){
           <Route path="/admin" element={<Protected roles={['ADMIN']}><AdminDashboard/></Protected>} />
           <Route path="/doctor" element={<Protected roles={['DOCTOR','ADMIN']}><DoctorDashboard/></Protected>} />
           <Route path="/reception" element={<Protected roles={['RECEPTIONIST','ADMIN']}><ReceptionDashboard/></Protected>} />
+          <Route path="/book-appointment" element={<AppointmentBooking />} />
         </Routes>
       </div>
       <ChatBot resetKey={resetKey} />
